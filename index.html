@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    
+    <!-- PERSONAL EXTERNAL CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Pari o Dispari / Palindromo</title>
+  </head>
+  
+  <body>
+    
+    <div class="container">
+
+      <div id="main_page">
+
+        <h1>VOGLIO FARE UN GIOCO CON TE</h1>
+
+        <button>OK, GIOCHIAMO</button>
+
+      </div>
+      <!-- /#main_page -->
+
+      <div id="palindrome">
+        <h1>GIOCO N° 1<br>SCRIVI UNA PAROLA PALINDROMA</h1>
+        <div id="palindrome_word_container">
+          <input type="text">
+          <button>CONTROLLA</button>
+        </div>
+
+        <div id="palindrome_result_container">
+          <h2></h2>
+          <button>GIOCO SUCCESSIVO</button>
+        </div>
+      </div>
+      <!-- /#palindrome -->
+
+      <div id="even_odd">
+        <h1>GIOCO N° 2<br>PARI O DISPARI</h1>
+        <div id="even_odd_choice_container">
+          <h2>SCEGLI PARI O DISPARI</h2>
+
+          <div id="even_odd_choice">
+            <button id="even">PARI</button>
+            <button id="odd">DISPARI</button>
+          </div>
+          <!-- /#even_odd_choice -->
+
+          <h2>SCEGLI UN NUMERO DA 1 A 10</h2>
+          <input type="number" min="1" max="10">
+          <button>GIOCA</button>
+        </div>
+
+        <div id="even_odd_result_container">
+          <h2></h2>
+          <button>RINIZIA L'AVVENTURA</button>
+        </div>
+      </div>
+      <!-- /#palindrome -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- PERSONAL EXTERNAL JS -->
+    <script src="./assets/js/main.js"></script>
+    
+  </body>
+  
+</html>

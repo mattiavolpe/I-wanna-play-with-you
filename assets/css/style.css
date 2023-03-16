@@ -1,0 +1,225 @@
+/* #region Common */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Creepster', cursive;
+  background: linear-gradient(0deg, #00000099, #00000099), url('./../img/saw_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 100svh;
+}
+
+/* #endregion Common */
+
+/* #region Utilities */
+
+.container {
+  position: relative;
+  width: 96%;
+  margin: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+#palindrome_word_container.goes_down,
+#even_odd_choice_container.goes_down {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(1);
+}
+
+#palindrome_result_container.goes_up,
+#even_odd_result_container.goes_up {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* #endregion Utilities */
+
+/* #region Elements */
+
+#main_page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+#main_page h1,
+#palindrome h1,
+#even_odd > h1 {
+  margin: 2rem 0;
+  color: #c1150d;
+  font-size: calc(2vw + 3rem);
+  text-align: center;
+}
+
+#main_page > button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 2rem;
+  background-color: transparent;
+  border: 3px dashed #c1150d;
+  color: #f5f5dc;
+  font-size: calc(2vw + 1rem);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s, transform 0.5s;
+}
+
+#main_page > button:hover {
+  color: #c1150d;
+  background-color: #000000;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+#palindrome,
+#even_odd {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: -2.08%;
+  transform: translate(100%, 0);
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+#palindrome_word_container {
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5dc;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: auto;
+  background-color: #00000099;
+  border: 3px dashed #c1150d;
+  transition: 1s;
+}
+
+#palindrome_word_container > input,
+#even_odd_choice_container > input {
+  width: 100%;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c1150d;
+  text-align: center;
+  color: #c1150d;
+  font-size: calc(1vw + 1rem);
+  text-transform: uppercase;
+  transition: border 0.5s, color 0.5s;
+}
+
+#even_odd_choice_container > input {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+#palindrome_word_container > input:focus-visible,
+#even_odd_choice_container > input:focus-visible {
+  outline: 0;
+  color: #f5f5dc;
+  border-bottom: 1px solid #f5f5dc;
+}
+
+#palindrome_word_container > button,
+#palindrome_result_container > button,
+#even_odd_choice_container > button,
+#even_odd_choice > button,
+#even_odd_result_container > button {
+  display: block;
+  padding: 0.75rem;
+  margin: 2rem auto 0;
+  background-color: transparent;
+  border: 3px dashed #c1150d;
+  color: #f5f5dc;
+  font-size: calc(1vw + 1rem);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+#even_odd_choice > button {
+  font-size: calc(0.5vw + 1rem);
+}
+
+#palindrome_word_container > button:hover,
+#palindrome_result_container > button:hover,
+#even_odd_choice_container > button:hover,
+#even_odd_choice > button:hover,
+#even_odd_result_container > button:hover {
+  color: #c1150d;
+  background-color: #000000;
+}
+
+#palindrome_result_container,
+#even_odd_result_container {
+  visibility: hidden;
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #c1150d;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: auto;
+  background-color: #00000099;
+  border: 3px dashed #c1150d;
+  text-align: center;
+  font-size: calc(1vw + 1rem);
+  transition: 1s;
+}
+
+#even_odd_choice_container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  max-width: 600px;
+  transition: 1s;
+}
+
+#even_odd_choice_container > h2 {
+  margin: 1rem 0;
+  color: #c1150d;
+  font-size: calc(1vw + 2rem);
+  text-align: center;
+}
+
+/* #endregion Elements */
+
+/* #region Media Queries */
+
+@media screen and (min-width: 420px) {
+
+  #palindrome_result_container.goes_up,
+  #even_odd_result_container.goes_up {
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+/* #endregion Media Queries */
