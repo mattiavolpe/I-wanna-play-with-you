@@ -105,15 +105,12 @@ function startPalindromeGame() {
 
   // FUNCTION TO CYCLE THROUGH HALF THE WORD TO CHECK IF EACH LETTER MATCHES ITS "SAME INDEXED LETTER WHEN STARTING COUNTING FROM THE END"
   function checkIfPalindrome(wordToCheck) {
-    let checker = false;
     for (let i = 0; i < wordToCheck.length / 2; i++) {
-      if (wordToCheck[i] == wordToCheck[wordToCheck.length - 1 - i]) {
-        checker = true;
-      } else {
-        return checker = false;
+      if (wordToCheck[i] != wordToCheck[wordToCheck.length - 1 - i]) {
+        return false;
       }
     }
-    return checker;
+    return true;
   }
 
 }
